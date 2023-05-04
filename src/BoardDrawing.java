@@ -81,18 +81,9 @@ public class BoardDrawing extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;//.create();
+        Graphics2D g2d = (Graphics2D) g;
 
-        /*
-		int sw = getSize().width;
-		int sh = getSize().height;
-		int a = (int) (0.75*((sw > sh)?sh:sw));
-		
-		//Point start = new Point(0,0);
-		//Point end = new Point(100,100);
-		
-		g.drawLine(0,0,sw, sh);
-         */
+        
         //Create cells
         int width = getWidth();
         int height = getHeight();
@@ -134,7 +125,7 @@ public class BoardDrawing extends JPanel {
 
             String message = "" + cellnos[i];
             g2d.drawString(message, (int) cell.getCenterX(), (int) cell.getCenterY());
-            //g2d.setColor(Color.red);
+            
 
             //draw player position
             for (int pl = 0; pl < bs.maxPlayers; pl++) {
@@ -202,14 +193,7 @@ public class BoardDrawing extends JPanel {
         g2d.setColor(Color.blue);
     }
 
-    /*
-	public void ensurePlayerPosition(){
-		for(Portal port :portals){
-			if(player == port.returnStart())
-				player = port.returnEnd();
-		}
-	}
-     */
+    
     /**
      * 
      * @param pnos
@@ -230,11 +214,7 @@ public class BoardDrawing extends JPanel {
         return message;
     }
 
-    /*
-	public void setPlayer(int a){
-		player = a;
-	}
-     */
+    
     /**
      * 
      * @param a
