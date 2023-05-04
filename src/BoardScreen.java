@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+
 public class BoardScreen extends JPanel {
 
     /**
@@ -35,6 +36,7 @@ public class BoardScreen extends JPanel {
 
     JButton go;
     JButton quit;
+    
 
     public void quitButtonActionListener() {
         if (JOptionPane.showConfirmDialog(this, "Are you sure?") == JOptionPane.OK_OPTION) {
